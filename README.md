@@ -13,8 +13,21 @@
 
 # Возможности утилиты:
 <dl>
-    <dt style="font-weight: bold;">Поддержка разных входных форматов:</dt><dd>yaml, json.</dd>
-    <dt style="font-weight: bold;">Генерация отчета в видe:</dt><dd>plain text, stylish и json.</dd>
+    <dt style="font-weight: bold;">Поддержка разных входных форматов:</dt>
+    <dd>
+        <ul>
+            <li>YAML</li>
+            <li>JSON</li>
+        </ul>
+    </dd>
+    <dt style="font-weight: bold;">Генерация отчета в видe:</dt>
+    <dd>
+        <ul>
+            <li>Plain Text</li>
+            <li>Stylish</li>
+            <li>JSON</li>
+        </ul>
+    </dd>
 </dl>
 
 # Установка
@@ -34,7 +47,7 @@ make install
 ## Демонстрация 
 <table style="width: 100%;">
     <tr>
-        <th style="width: 100%;font-size: 25px;font-weight: bold;text-align: center;" colspan="2">Сравнение плоских файлов (JSON)</th>
+        <th style="width: 100%;font-size: 25px;font-weight: bold;text-align: center;" colspan="1">Сравнение плоских файлов (JSON)</th>
     </tr>
         <tr>
         <td style="width: 100%;">
