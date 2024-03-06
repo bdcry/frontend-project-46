@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import parseFile from '../src/parser/jsonParser.js';
+import compare from '../src/compare.js';
 
 program
   .version('1.0.0')
@@ -8,11 +8,8 @@ program
   .option('-f, --format [type]', 'output format')
   .helpOption('-h, --help', 'output usage information')
   .arguments('<filepath1> <filepath2>')
-  .action((filepath1, filepath2) => {
-    const data1 = parseFile(filepath1);
-    const data2 = parseFile(filepath2);
-    console.log('Data from filepath1:', data1);
-    console.log('Data from filepath2:', data2);
+  .action((filePath1, filePath2) => {
+    console.log(compare(filePath1, filePath2));
   });
 
 program.parse();
