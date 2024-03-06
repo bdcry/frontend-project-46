@@ -47,7 +47,7 @@ make install
 ## Демонстрация 
 <table style="width: 100%;">
     <tr>
-        <th style="width: 100%;font-size: 25px;font-weight: bold;text-align: center;" colspan="1">Сравнение плоских файлов (JSON)</th>
+        <th style="width: 100%;font-size: 25px;font-weight: bold;text-align: center;">Сравнение плоских файлов (JSON)</th>
     </tr>
         <tr>
         <td style="width: 100%;">
