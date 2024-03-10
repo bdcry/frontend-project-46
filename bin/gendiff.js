@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import compare from '../src/compare.js';
+import gendiff from '../src/gendiff.js';
 
 program
   .version('1.0.0')
@@ -9,7 +9,7 @@ program
   .helpOption('-h, --help', 'output usage information')
   .arguments('<filepath1> <filepath2>')
   .action((filePath1, filePath2) => {
-    console.log(compare(filePath1, filePath2));
+    console.log(gendiff(filePath1, filePath2));
   });
 
 program.parse();

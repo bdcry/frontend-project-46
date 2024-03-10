@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import parseFile from './parser/jsonParser.js';
 
-const compare = (filePath1, filePath2) => {
+const gendiff = (filePath1, filePath2) => {
   const obj1 = parseFile(filePath1);
   const obj2 = parseFile(filePath2);
 
@@ -24,4 +24,4 @@ const compare = (filePath1, filePath2) => {
   return `{\n${diffs.join('\n')}\n}`;
 };
 
-export default compare;
+export default gendiff;
