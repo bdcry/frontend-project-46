@@ -23,7 +23,11 @@ jobs:
       run: make lint
       
     - name: 🧪 Run Tests
-      run: make test
+      run: |
+        npm test -- --coverage
+        TEST_EXIT_CODE=$?
+        ./cc-test-reporter after-build --exit-code $TEST_EXIT_CODE -t lcov
+
 
     - name: 📊 Send Test Coverage to CodeClimate
       env:
@@ -34,4 +38,3 @@ jobs:
         ./cc-test-reporter before-build
         npm test -- --coverage
         ./cc-test-reporter after-build --exit-code ${{ job.status }} -t lcov
-
