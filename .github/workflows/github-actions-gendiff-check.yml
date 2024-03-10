@@ -22,19 +22,18 @@ jobs:
     - name: 🔎 Lint Code
       run: make lint
       
-    - name: 🧪 Run Tests
+    - name: 📊 Prepare CodeClimate Test Reporter
       run: |
-        npm test -- --coverage
-        TEST_EXIT_CODE=$?
-        ./cc-test-reporter after-build --exit-code $TEST_EXIT_CODE -t lcov
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
 
+    - name: 🧪 Run Tests With Coverage
+      run: npm test -- --coverage
 
     - name: 📊 Send Test Coverage to CodeClimate
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_ID }}
       run: |
-        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        chmod +x ./cc-test-reporter
-        ./cc-test-reporter before-build
-        npm test -- --coverage
-        ./cc-test-reporter after-build --exit-code ${{ job.status }} -t lcov
+        ./cc-test-reporter after-build --exit-code $? -t lcov
+
