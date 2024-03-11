@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710114257680" clover="3.2.0">
-  <project timestamp="1710114257680" name="All files">
-    <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3" elements="27" coveredelements="27" complexity="0" loc="18" ncloc="18" packages="2" files="2" classes="2"/>
+<coverage generated="1710187398457" clover="3.2.0">
+  <project timestamp="1710187398457" name="All files">
+    <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3" elements="34" coveredelements="34" complexity="0" loc="21" ncloc="21" packages="2" files="2" classes="2"/>
     <package name="src">
       <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="gendiff.js" path="C:\Dev\frontend-project-46\src\gendiff.js">
         <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="19" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="15" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
       </file>
     </package>
     <package name="src.parser">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="jsonParser.js" path="C:\Dev\frontend-project-46\src\parser\jsonParser.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="parsers.js" path="C:\Dev\frontend-project-46\src\parser\parsers.js">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="10" count="17" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
       </file>
     </package>
   </project>
