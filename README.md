@@ -63,7 +63,7 @@ make install
     </tr>
         <tr>
         <td style="width: 100%;">
-            <a href="https://asciinema.org/a/fZNivjznQvDIvZLC8FwbBbPtx" target="_blank"><img src="https://asciinema.org/a/fZNivjznQvDIvZLC8FwbBbPtx.svg" /></a>
+            <a href="https://asciinema.org/a/IVBEmDYiEzVVrRVlQEuQnCrl8" target="_blank"><img src="https://asciinema.org/a/IVBEmDYiEzVVrRVlQEuQnCrl8.svg" /></a>
         </td>
     </tr>
 </table>
