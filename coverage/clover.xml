@@ -1,38 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710187398457" clover="3.2.0">
-  <project timestamp="1710187398457" name="All files">
-    <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3" elements="34" coveredelements="34" complexity="0" loc="21" ncloc="21" packages="2" files="2" classes="2"/>
+<coverage generated="1710454643384" clover="3.2.0">
+  <project timestamp="1710454643385" name="All files">
+    <metrics statements="32" coveredstatements="30" conditionals="16" coveredconditionals="13" methods="6" coveredmethods="6" elements="54" coveredelements="49" complexity="0" loc="32" ncloc="32" packages="2" files="2" classes="2"/>
     <package name="src">
-      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <metrics statements="24" coveredstatements="24" conditionals="12" coveredconditionals="12" methods="5" coveredmethods="5"/>
       <file name="gendiff.js" path="C:\Dev\frontend-project-46\src\gendiff.js">
-        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <metrics statements="24" coveredstatements="24" conditionals="12" coveredconditionals="12" methods="5" coveredmethods="5"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="13" count="27" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="16" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="19" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="15" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="24" count="8" type="stmt"/>
+        <line num="5" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="29" count="11" type="cond" truecount="4" falsecount="0"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="32" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.parser">
-      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="parsers.js" path="C:\Dev\frontend-project-46\src\parser\parsers.js">
-        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="17" type="stmt"/>
-        <line num="7" count="17" type="stmt"/>
-        <line num="8" count="17" type="stmt"/>
-        <line num="10" count="17" type="cond" truecount="4" falsecount="0"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="1" falsecount="3"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
       </file>
     </package>
   </project>
