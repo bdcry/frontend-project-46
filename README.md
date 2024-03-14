@@ -57,3 +57,13 @@ make install
         </td>
     </tr>
 </table>
+<table style="width: 100%;">
+    <tr>
+        <th style="width: 100%;font-size: 25px;font-weight: bold;text-align: center;">Сравнение плоских файлов (YAML)</th>
+    </tr>
+        <tr>
+        <td style="width: 100%;">
+            <a href="https://asciinema.org/a/IVBEmDYiEzVVrRVlQEuQnCrl8" target="_blank"><img src="https://asciinema.org/a/IVBEmDYiEzVVrRVlQEuQnCrl8.svg" /></a>
+        </td>
+    </tr>
+</table>
