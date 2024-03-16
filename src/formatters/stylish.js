@@ -1,12 +1,13 @@
+import _ from 'lodash';
+
 const stringify = (value, depth) => {
-  if (typeof value !== 'object' || value === null) {
+  if (!_.isObject(value)) {
     return `${value}`;
   }
   const indent = ' '.repeat(depth * 4);
-  const lines = Object
-    .entries(value)
-    .map(([key, val]) => `${indent}    ${key}: ${stringify(val, depth + 1)}`);
-  return `{\n${lines.join('\n')}\n${indent}}`;
+  const bracketIndent = indent.slice(0, -4);
+  const lines = Object.entries(value).map(([key, val]) => `${indent}${key}: ${stringify(val, depth + 1)}`);
+  return `{\n${lines.join('\n')}\n${bracketIndent}}`;
 };
 
 const formatStylish = (diff) => {
