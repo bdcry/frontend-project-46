@@ -12,6 +12,8 @@ const readContent = (filename) => fs.readFileSync(getFixturePath(filename), 'utf
 
 const expectedStylish = readContent('expected_stylish.txt');
 const expectedPlain = readContent('expected_plain.txt');
+const expectedJSON = readContent('expected_json.txt');
+
 // Stylish Check
 describe('FormatStylish', () => {
   it('FormatStylish JSON check', () => {
@@ -47,5 +49,24 @@ describe('FormatPlain', () => {
     const diff = gendiff(filePath1, filePath2, 'plain');
 
     expect(diff).toEqual(expectedPlain);
+  });
+});
+
+// JSON Check
+describe('FormatJSON', () => {
+  it('FormatJSON JSON check', () => {
+    const filePath1 = getFixturePath('file1.json');
+    const filePath2 = getFixturePath('file2.json');
+    const diff = gendiff(filePath1, filePath2, 'json');
+
+    expect(diff).toEqual(expectedJSON);
+  });
+
+  it('FormatJSON YML check', () => {
+    const filePath1 = getFixturePath('file1.yml');
+    const filePath2 = getFixturePath('file2.yml');
+    const diff = gendiff(filePath1, filePath2, 'json');
+
+    expect(diff).toEqual(expectedJSON);
   });
 });
