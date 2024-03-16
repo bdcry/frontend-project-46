@@ -67,3 +67,13 @@ make install
         </td>
     </tr>
 </table>
+<table style="width: 100%;">
+    <tr>
+        <th style="width: 100%;font-size: 25px;font-weight: bold;text-align: center;">Сравнение вложенных файлов (JSON | YAML)</th>
+    </tr>
+        <tr>
+        <td style="width: 100%;">
+            <a href="https://asciinema.org/a/gEbavZkavWg1j1qqSzOaAu9eG" target="_blank"><img src="https://asciinema.org/a/gEbavZkavWg1j1qqSzOaAu9eG.svg" /></a>
+        </td>
+    </tr>
+</table>
