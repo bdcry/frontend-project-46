@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '__tests-fixtures__', filename);
 const readContent = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-const expectedJson = readContent('expected.txt');
+const expectedJson = readContent('expected_stylish.txt');
 
 // JSON format check
 test('it should correctly compare two JSON files with nested structures', () => {
