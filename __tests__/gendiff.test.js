@@ -10,14 +10,42 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '__tests-fixtures__', filename);
 const readContent = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-const expectedJson = readContent('expected_stylish.txt');
+const expectedStylish = readContent('expected_stylish.txt');
+const expectedPlain = readContent('expected_plain.txt');
+// Stylish Check
+describe('FormatStylish', () => {
+  it('FormatStylish JSON check', () => {
+    const filePath1 = getFixturePath('file1.json');
+    const filePath2 = getFixturePath('file2.json');
+    const diff = gendiff(filePath1, filePath2);
 
-// JSON format check
-test('it should correctly compare two JSON files with nested structures', () => {
-  const filePath1 = getFixturePath('file1.json');
-  const filePath2 = getFixturePath('file2.json');
+    expect(diff).toEqual(expectedStylish);
+  });
 
-  const diff = gendiff(filePath1, filePath2);
+  it('FormatStylish YML check', () => {
+    const filePath1 = getFixturePath('file1.yml');
+    const filePath2 = getFixturePath('file2.yml');
+    const diff = gendiff(filePath1, filePath2);
 
-  expect(diff).toEqual(expectedJson);
+    expect(diff).toEqual(expectedStylish);
+  });
+});
+
+// Plain Check
+describe('FormatPlain', () => {
+  it('FormatPlain JSON check', () => {
+    const filePath1 = getFixturePath('file1.json');
+    const filePath2 = getFixturePath('file2.json');
+    const diff = gendiff(filePath1, filePath2, 'plain');
+
+    expect(diff).toEqual(expectedPlain);
+  });
+
+  it('FormatPlain YML check', () => {
+    const filePath1 = getFixturePath('file1.yml');
+    const filePath2 = getFixturePath('file2.yml');
+    const diff = gendiff(filePath1, filePath2, 'plain');
+
+    expect(diff).toEqual(expectedPlain);
+  });
 });

@@ -5,7 +5,7 @@ import gendiff from '../src/gendiff.js';
 program
   .version('1.0.0')
   .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'output format')
+  .option('-f, --format [type]', 'output format (default: "stylish")')
   .helpOption('-h, --help', 'output usage information')
   .arguments('<filepath1> <filepath2>')
   .action((filePath1, filePath2, options) => {
