@@ -10,63 +10,16 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readContent = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-const expectedStylish = readContent('expected_stylish.txt');
-const expectedPlain = readContent('expected_plain.txt');
-const expectedJSON = readContent('expected_json.txt');
+const extensions = ['.json', '.yml'];
 
-// Stylish Check
-describe('FormatStylish', () => {
-  it('FormatStylish JSON check', () => {
-    const filePath1 = getFixturePath('file1.json');
-    const filePath2 = getFixturePath('file2.json');
-    const diff = gendiff(filePath1, filePath2);
+// Check JSON/Plain/Stylish with JSON/YML.
+describe.each(['json', 'plain', 'stylish'])('GenDiff test with formatter %s', (formatter) => {
+  test.each(extensions)('GenDiff test with extension %s', (extension) => {
+    const filePath1 = getFixturePath(`file1${extension}`);
+    const filePath2 = getFixturePath(`file2${extension}`);
+    const diff = gendiff(filePath1, filePath2, formatter);
+    const expectedResult = readContent(`expected_${formatter}.txt`);
 
-    expect(diff).toEqual(expectedStylish);
-  });
-
-  it('FormatStylish YML check', () => {
-    const filePath1 = getFixturePath('file1.yml');
-    const filePath2 = getFixturePath('file2.yml');
-    const diff = gendiff(filePath1, filePath2);
-
-    expect(diff).toEqual(expectedStylish);
-  });
-});
-
-// Plain Check
-describe('FormatPlain', () => {
-  it('FormatPlain JSON check', () => {
-    const filePath1 = getFixturePath('file1.json');
-    const filePath2 = getFixturePath('file2.json');
-    const diff = gendiff(filePath1, filePath2, 'plain');
-
-    expect(diff).toEqual(expectedPlain);
-  });
-
-  it('FormatPlain YML check', () => {
-    const filePath1 = getFixturePath('file1.yml');
-    const filePath2 = getFixturePath('file2.yml');
-    const diff = gendiff(filePath1, filePath2, 'plain');
-
-    expect(diff).toEqual(expectedPlain);
-  });
-});
-
-// JSON Check
-describe('FormatJSON', () => {
-  it('FormatJSON JSON check', () => {
-    const filePath1 = getFixturePath('file1.json');
-    const filePath2 = getFixturePath('file2.json');
-    const diff = gendiff(filePath1, filePath2, 'json');
-
-    expect(diff).toEqual(expectedJSON);
-  });
-
-  it('FormatJSON YML check', () => {
-    const filePath1 = getFixturePath('file1.yml');
-    const filePath2 = getFixturePath('file2.yml');
-    const diff = gendiff(filePath1, filePath2, 'json');
-
-    expect(diff).toEqual(expectedJSON);
+    expect(diff).toEqual(expectedResult);
   });
 });
