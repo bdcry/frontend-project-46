@@ -9,6 +9,7 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/79d7abfeda73473a7edf/test_coverage)](https://codeclimate.com/github/bdcry/frontend-project-46/test_coverage) <span style="font-size: 18px;"> - Процент Test Coverage от Codeclimate.</span>
 
+# учебный проект от Hexlet - Вычислитель отличий
 # Описание
 Это второй учебный проект от Hexlet - Вычислитель отличий.
 Программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения которой существует множество онлайн сервисов, например http://www.jsondiff.com/. Подобный механизм используется при выводе тестов или при автоматическом отслеживании изменений в конфигурационных файлах.
