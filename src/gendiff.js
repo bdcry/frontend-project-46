@@ -6,7 +6,7 @@ import buildTreeDiff from './buildTreeDiff.js';
 
 const dirName = process.cwd();
 const readFile = (filepath) => fs.readFileSync(path.resolve(dirName, '__fixtures__', filepath), 'utf-8');
-const getFormat = (formatName) => path.extname(formatName);
+const getFormat = (formatName) => path.extname(formatName).substring(1);
 
 const gendiff = (filePath1, filePath2, format = 'stylish') => {
   const data1 = readFile(filePath1);
