@@ -1,18 +1,20 @@
 import _ from 'lodash';
 
+const INDENT_SIZE = 4;
+
 const stringify = (value, depth) => {
   if (!_.isObject(value)) {
     return `${value}`;
   }
-  const indent = ' '.repeat(depth * 4);
-  const bracketIndent = indent.slice(0, -4);
+  const indent = ' '.repeat(depth * INDENT_SIZE);
+  const bracketIndent = indent.slice(0, -INDENT_SIZE);
   const lines = Object.entries(value).map(([key, val]) => `${indent}${key}: ${stringify(val, depth + 1)}`);
   return `{\n${lines.join('\n')}\n${bracketIndent}}`;
 };
 
 const formatStylish = (diff) => {
   const iter = (currentValue, depth) => {
-    const baseIndent = ' '.repeat((depth - 1) * 4);
+    const baseIndent = ' '.repeat((depth - 1) * INDENT_SIZE);
     const lines = currentValue.flatMap((node) => {
       const {
         type,
