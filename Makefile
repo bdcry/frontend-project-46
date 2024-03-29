@@ -10,5 +10,8 @@ publish:
 lint: 
 	npx eslint .
 
-test:
+test-coverage:
 	npm test -- --coverage
+
+test:
+	npm test
